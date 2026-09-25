@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root, .dark {
+  --bg-primary: #06080e;
+  --bg-secondary: #0a0e1a;
+  --bg-card: #0f1526;
+  --bg-surface: #141c33;
+  --border-color: rgba(30, 41, 75, 0.6);
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+}
+
+.light {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-surface: #e2e8f0;
+  --border-color: rgba(203, 213, 225, 0.8);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+}
+
+.cyberpunk {
+  --bg-primary: #0d0221;
+  --bg-secondary: #19053c;
+  --bg-card: #260959;
+  --bg-surface: #380e7f;
+  --border-color: rgba(255, 0, 127, 0.4);
+  --text-primary: #00f0ff;
+  --text-secondary: #ff007f;
+}
+
+/* Light Mode Overrides */
+.light body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.light aside {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light main {
+  background: #f1f5f9 !important;
+}
+
+.light input, .light select, .light textarea {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light .bg-arcane-950, .light .bg-arcane-900, .light .bg-arcane-850 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Cyberpunk Mode Overrides */
+.cyberpunk body {
+  background-color: #0d0221;
+  color: #00f0ff;
+}
+
+.cyberpunk aside {
+  background-color: #19053c !important;
+  border-color: #ff007f !important;
+}
+
+.cyberpunk main {
+  background: linear-gradient(135deg, #0d0221 0%, #19053c 50%, #260959 100%) !important;
+}
+
+.cyberpunk input, .cyberpunk select, .cyberpunk textarea {
+  background-color: #0d0221 !important;
+  color: #00f0ff !important;
+  border-color: #ff007f !important;
+}
+
+.cyberpunk .bg-arcane-950, .cyberpunk .bg-arcane-900 {
+  background-color: #19053c !important;
+  color: #00f0ff !important;
+}
+
+@layer base {
+  body {
+    @apply bg-arcane-950 text-slate-100 font-sans antialiased overflow-hidden transition-colors duration-300;
+  }
+}
+
+/* Custom Scrollbars for Arcaneum Glassmorphic Interface */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 14, 26, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(43, 58, 103, 0.6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8);
+}
